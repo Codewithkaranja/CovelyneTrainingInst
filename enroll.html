@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enroll Now</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Reset & base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #fdfaff;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Navigation */
+      a[href="index.html"] {
+        display: inline-block;
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #4b0082;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+      a[href="index.html"]:hover {
+        background-color: #6a0dad;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* Section Title */
+      #enrollnow h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #4b0082;
+        margin-bottom: 20px;
+      }
+
+      #enrollnow p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #444;
+      }
+
+      /* Form Styling */
+      form {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #4b0082;
+        box-shadow: 0 0 0 3px rgba(75, 0, 130, 0.2);
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      /* Submit Button */
+      button[type="submit"] {
+        display: block;
+        width: 100%;
+        background-color: #4b0082;
+        color: white;
+        padding: 14px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        margin-top: 10px;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #6a0dad;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #4b0082;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 60px;
+      }
+
+      footer p {
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+      }
+      /* WhatsApp button */
+      .whatsapp-link {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .btn-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #25d366;
+        color: white;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-whatsapp:hover {
+        background-color: #1ebe5d;
+      }
+
+      .btn-whatsapp img {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">Home</a>
+
+    <section id="enrollnow" class="animate">
+      <div class="container">
+        <h2>Enroll Now</h2>
+        <p>
+          Admissions Ongoing. Apply Here or visit our Main Campus at Shanbad
+          House, Opposite New Naivas, Machakos Town, Kenya
+        </p>
+
+        <form
+          action="https://formsubmit.co/covelynetrainingnstitute@gmail.com"
+          method="POST"
+        >
+          <!-- Prevent Spam -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://yourdomain.com?success=true"
+          />
+
+          <div class="form-grid">
+            <div>
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="tel"
+                name="phone"
+                pattern="[0-9+\s]{10,15}"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div>
+              <select name="Course Interested In" required>
+                <option value="">Select Course</option>
+                <option value="Diploma in Hair Dressing">
+                  Diploma in Hair Dressing
+                </option>
+                <option value="Certificate in Hair Dressing">
+                  Certificate in Hair Dressing
+                </option>
+                <option value="Diploma in Beauty Therapy">
+                  Diploma in Beauty Therapy
+                </option>
+                <option value="Certificate in Beauty Therapy">
+                  Certificate in Beauty Therapy
+                </option>
+                <option value="Barbering">Barbering</option>
+                <option value="Nail Technology">Nail Technology</option>
+                <option value="T.O.T">T.O.T</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <textarea
+              name="message"
+              placeholder="Tell us about your interests and goals..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Application</button>
+        </form>
+
+        <!-- WhatsApp Button -->
+        <div class="whatsapp-link">
+          <a
+            href="https://wa.me/254714935007?text=Nataka%20kujiunga%20na%20Covelyne%20Training%20Institute"
+            target="_blank"
+            class="btn-whatsapp"
+          >
+            <img src="whatsapp logo green.png" alt="WhatsApp" />
+            Chat with Admissions
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Covelyne Training Institute. All rights reserved.</p>
+        <p>
+          TVETA Approved Institution | Transforming Lives Through Beauty
+          Education
+        </p>
+      </div>
+    </footer>
+    <script defer>
+      // Optional success feedback (for non-redirect version)
+      if (window.location.href.includes("success=true")) {
+        alert("🎉 Thank you! Your application has been received.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="beauty college in Machakos, hair and beauty school Kenya, cosmetology courses Kenya,
+        makeup and beauty training, professional hairdressing school"
+    />
+    <meta
+      name="description"
+      content=" Welcome to Covelyne Training Institute — a premier institution in Kenya offering hands
+    on training in beauty therapy, hairdressing, cosmetology, nail technology, 
+    and spa treatments. Our mission is to empower students with modern skills 
+    and professional expertise needed to succeed in the dynamic beauty industry. 
+    Whether you're starting your journey or enhancing your career, 
+    Covelyne Training Institute provides quality education, experienced tutors, and a vibrant learning environment."
+    />
+    <title>Covelyne Institute</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <header id="header">
+      <div class="container header-container">
+        <div class="logo">Covelyne <span>Institute</span></div>
+        <nav>
+          <ul class="nav-menu">
+            <li><i class="fa-solid fa-house-chimney"></i>  <a href="#home" class="active">Home</a></li>
+            <li><i class="fa-solid fa-circle-question"></i>  <a href="about.html">About Us</a></li>
+            <li><i class="fa-solid fa-book-open-reader"></i>  <a href="courses.html">Courses</a></li>
+            <li><i class="fa-solid fa-right-to-bracket"></i>  <a href="enroll.html">Enroll Now</a></li>
+            <li><i class="fa-duotone fa-solid fa-camera"></i>  <a href="gallery.html">Gallery</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="connect.html">Contact Us</a></li>
+            <!-- <li><a href="connect.html">Social Media</a></li>
+            <li><a href="connect.html">Location</a></li>-->
+          </ul>
+        </nav>
+  <div id="hamburger" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+      </div>
+    </header>
+
+    <!-- Dark Mode Toggle (Added at top right) -->
+    <div class="dark-mode-toggle">
+      <label class="toggle-switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="toggle-slider"></span>
+        <span class="toggle-label">Dark Mode</span>
+      </label>
+    </div>
+
+    <section id="home">
+      <div class="container">
+        <h1>Welcome to Covelyne Training Institute</h1>
+        <p>Your journey to a glamorous career begins here.</p>
+        <div class="hero-btns">
+          <a href="courses.html" class="btn">Explore Courses</a>
+          <a href="enroll.html" class="btn btn-secondary">Enroll Today</a>
+
+
+
+
+
+
+
+
+
+
+
+          
+        </div>
+      </div>
+       <!-- WhatsApp Button -->
+        <div class="whatsapp-link">
+          <a
+            href="https://wa.me/254714935007?text=Nataka%20kujiunga%20na%20Covelyne%20Training%20Institute"
+            target="_blank"
+            class="btn-whatsapp"
+          >
+            <img src="whatsapp logo green.png" alt="WhatsApp" />
+            Chat with Admissions
+          </a>
+        </div>
+    
+
+    
+  
+        
+     <!-- Course Filter Toggle (New Addition) -->
+        
+        
+       
+        
+
+   
+
+    
+      
+       
+        
+     
+
+    <!-- Other sections remain unchanged -->
+    <!-- ... rest of your HTML ... -->
+
+    
+    <script src="index.js"></script>
+    
+    <!-- Add this script for toggle functionality -->
+    <script>
+      document.getElementById('hamburger').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.nav-menu').classList.toggle('active');
+});
+      // Dark mode toggle functionality
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      darkModeToggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+      
+      // Course filter functionality
+      const courseFilterToggle = document.getElementById('courseFilterToggle');
+      courseFilterToggle.addEventListener('change', () => {
+        document.querySelectorAll('.course-card').forEach(card => {
+          if(card.querySelector('.course-level').textContent !== 'Diploma') {
+            card.style.display = courseFilterToggle.checked ? 'none' : 'block';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

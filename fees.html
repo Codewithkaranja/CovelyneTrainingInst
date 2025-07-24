@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Reset & base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f8f8fc;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Home button */
+      a[href="index.html"] {
+        display: inline-block;
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #4b0082;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+      a[href="index.html"]:hover {
+        background-color: #6a0dad;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* Section titles */
+      #requirements h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #4b0082;
+        border-left: 5px solid #6a0dad;
+        padding-left: 15px;
+      }
+
+      /* Lists */
+      #requirements ul {
+        margin: 0 0 30px 20px;
+        padding-left: 15px;
+      }
+
+      #requirements li {
+        padding: 8px 0;
+        font-size: 1rem;
+        list-style: disc;
+        color: #444;
+      }
+
+      /* Notes section */
+      #requirements h2 + ul li {
+        font-weight: 500;
+        color: #222;
+      }
+
+      /* Paragraphs */
+      #requirements p {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: #444;
+      }
+
+      /* Table styles */
+      .course-pricing table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .course-pricing thead {
+        background-color: #4b0082;
+        color: white;
+      }
+
+      .course-pricing th,
+      .course-pricing td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+      }
+
+      .course-pricing tbody tr:hover {
+        background-color: #f1f1fb;
+      }
+
+      /* Responsive Table */
+      @media (max-width: 768px) {
+        .course-pricing table,
+        .course-pricing thead,
+        .course-pricing tbody,
+        .course-pricing th,
+        .course-pricing td,
+        .course-pricing tr {
+          display: block;
+        }
+
+        .course-pricing thead {
+          display: none;
+        }
+
+        .course-pricing td {
+          position: relative;
+          padding-left: 50%;
+          text-align: right;
+          border: none;
+          border-bottom: 1px solid #eee;
+        }
+
+        .course-pricing td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 20px;
+          top: 15px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #555;
+          font-size: 0.9rem;
+          text-align: left;
+        }
+      }
+
+      /* Footer */
+      footer {
+        background-color: #4b0082;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 60px;
+      }
+
+      footer p {
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+      }
+    </style>
+    <title>Fee Structure</title>
+  </head>
+  <body>
+    <a href="index.html">Home</a>
+
+    <section id="requirements">
+      <div class="container">
+        <h2>Requirements</h2>
+        <ul>
+          <li>Registration fee 1,000/=</li>
+          <li>Fees to be paid</li>
+          <li>2 T-shirts provided by the college at 1,000/= each</li>
+          <li>Black skirts/trouser</li>
+          <li>(2)3 quire hard cover and pen</li>
+          <li>College WID card 500/=</li>
+          <li>National ID or Birth Certificate</li>
+        </ul>
+        <br />
+
+        <h2>N/b</h2>
+        <ul>
+          <li>Hostels Available</li>
+          <li>Practical products should be provided by the students</li>
+          <li>Diploma Courses 10 months</li>
+          <li>Certificate courses 6 months</li>
+          <li>T.O.T 12 months</li>
+        </ul>
+        <br />
+        <h2>Fee Structure</h2>
+        <p>The Cosmetology fees structure below includes (Tuition Fee only)</p>
+        <div class="course-pricing">
+          <table>
+            <thead>
+              <tr>
+                <th>COURSE</th>
+                <th>TERM 1</th>
+                <th>TERM 2</th>
+                <th>TERM 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Course">Diploma in Hair Dressing</td>
+                <td data-label="Term 1">24,000</td>
+                <td data-label="Term 2">22,000</td>
+                <td data-label="Term 3">20,000</td>
+              </tr>
+              <tr>
+                <td data-label="Course">Certificate In Hair Dressing</td>
+                <td data-label="Term 1">18,000</td>
+                <td data-label="Term 2">18,000</td>
+                <td data-label="Term 3"></td>
+              </tr>
+              <tr>
+                <td data-label="Course">Diploma in Beauty Therapy</td>
+                <td data-label="Term 1">24,000</td>
+                <td data-label="Term 2">22,000</td>
+                <td data-label="Term 3">20,000</td>
+              </tr>
+              <tr>
+                <td data-label="Course">Certificate In Beauty Therapy</td>
+                <td data-label="Term 1">18,000</td>
+                <td data-label="Term 2">18,000</td>
+                <td data-label="Term 3"></td>
+              </tr>
+              <tr>
+                <td data-label="Course">Barbering</td>
+                <td data-label="Term 1">10,000</td>
+                <td data-label="Term 2"></td>
+                <td data-label="Term 3"></td>
+              </tr>
+              <tr>
+                <td data-label="Course">Nail Technology</td>
+                <td data-label="Term 1">10,000</td>
+                <td data-label="Term 2"></td>
+                <td data-label="Term 3"></td>
+              </tr>
+              <tr>
+                <td data-label="Course">T.O.T</td>
+                <td data-label="Term 1">25,000</td>
+                <td data-label="Term 2">22,000</td>
+                <td data-label="Term 3">20,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <h2>Examination & Certification</h2>
+
+        <ul>
+          <li>
+            Exam Fee(NITA) 11,000/= Payale in (April, August and December)
+          </li>
+          <li>Internal Certificate 1,000/=</li>
+          <li>Diploma 2000/=</li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Covelyne Training Institute. All rights reserved.</p>
+        <p>
+          TVETA Approved Institution | Transforming Lives Through Beauty
+          Education
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  /* ========== BASE STYLES ========== */
+:root {
+  --primary: #f56d0c;
+  --primary-dark: #cc5500;
+  --secondary: #3549fd;
+  --accent: #ca8d29;
+  --light: #f9f9f9;
+  --dark: #333;
+  --gray: #777;
+  --light-gray: #f5f5f5;
+  --transition: all 0.3s ease;
+  --shadow: 0 5px 15px #cc5500;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('covelynebackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--secondary);
+  border-radius: 2px;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: blue;
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  background: #1a191800;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0);
+}
+
+.btn-secondary {
+  background: blue;
+}
+
+.btn-secondary:hover {
+  background: #1a191800;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ========== HEADER & NAVIGATION ========== */
+header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  transition: var(--transition);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--secondary);
+}
+/* Toggle Button Styles - Responsive and Visible */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  min-width: 60px; /* Ensures visibility on small screens */
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #2196F3;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .toggle-switch {
+    width: 50px;
+    height: 28px;
+  }
+  
+  .toggle-slider:before {
+    height: 20px;
+    width: 20px;
+  }
+  
+  input:checked + .toggle-slider:before {
+    transform: translateX(22px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .toggle-switch {
+    width: 40px;
+    height: 24px;
+  }
+  
+  .toggle-slider:before {
+    height: 16px;
+    width: 16px;
+  }
+  
+  input:checked + .toggle-slider:before {
+    transform: translateX(16px);
+  }
+}
+
+/*.nav-menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-menu li {
+        margin: 0 10px;
+      }
+
+      .nav-menu a {
+        font-weight: 500;
+        position: sticky;
+        padding: 5px 0;
+      }
+
+      .nav-menu a:after {
+        content: "";
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--secondary);
+        transition: var(--transition);
+      }
+
+      .nav-menu a:hover:after {
+        width: 100%;
+      }
+
+      .nav-menu a.active {
+        color: var(--secondary);
+      }
+
+      .nav-menu a.active:after {
+        width: 100%;
+      }
+
+      .header-btns .btn {
+        margin-left: 10px;
+        padding: 8px 20px;
+      }
+
+      .mobile-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }*/
+/*
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  /*flex-direction: row;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  font-weight: 600;
+  position: relative;
+  padding: 5px 0;
+  color: black;
+  transition:blue;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--secondary);
+  transition: var(--transition);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+#nav-menu {
+  display: flex;
+  /*gap: 2rem;
+  list-style: none;
+}*/
+
+/* Base style: hidden off-screen */
+/* Normal desktop nav menu
+#nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}*/
+
+/* Hide nav menu and show hamburger on small screens 
+@media (max-width: 768px) {
+  #nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  #nav-menu.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+} */
+
+
+/* ========== RESPONSIVE MENU ========== */
+@media (max-width: 768px) {
+  .hamburger{
+    display:flex;
+  }
+  nav ul {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    background-color: blue;
+    height: 100vh;
+    width: 220px;
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+    /* ===== HERO SECTION ===== */
+    #home {
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(#cc5500, rgba(142, 68, 173, 0.8)), 
+                  url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=1800') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding-top: 70px;
+    }
+    
+    #home h1 {
+      font-size: 4rem;
+      color: white;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease;
+    }
+    
+    #home p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+    
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+    
+    
+    /* ===== ABOUT SECTION ===== */
+    #about {
+      position: relative;
+      overflow: hidden;
+      background-color:#0801011a;
+      color: rgb(238, 232, 232);
+      
+    }
+    
+    #about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .accent-text {
+      color: blue;
+      font-weight: 600;
+    }
+    
+    /* ===== COURSES SECTION ===== */
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .course-card {
+      background: rgba(255, 255, 255, 0.021);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .course-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      
+    }
+    
+    .course-content {
+      padding: 25px;
+    }
+    
+    .course-content h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    
+    /* ===== GALLERY SECTION ===== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+    
+    figure {
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    figure:hover {
+      transform: scale(1.03);
+    }
+    
+    figure img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    figcaption {
+      padding: 15px;
+      font-size: 0.9rem;
+      color: var(--gray);
+      font-style: italic;
+    }
+    
+    /* ===== ENROLL SECTION ===== */
+    #enrollnow {
+      background:#cc55003b;
+      color: white;
+    }
+    
+    #enrollnow h2 {
+      color:#f56d0c;
+    }
+    
+    #enrollnow h2::after {
+      background: var(--secondary);
+    }
+    
+    #enrollnow p {
+      margin-bottom: 30px;
+    }
+    
+    form {
+      max-width: 700px;
+      margin: 40px auto 0;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      backdrop-filter: blur(10px);
+    }
+    
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    input, select, textarea {
+      width: 100%;
+      padding: 15px;
+      border-radius: var(--border-radius);
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(255, 255, 255, 0.918);
+      color: black;
+      font-size: 1rem;
+    }
+    
+    input::placeholder, textarea::placeholder {
+      color: black;
+    }
+    
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    /* ===== CONTACT SECTION ===== */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .contact-item {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .contact-item i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    /* ===== SOCIAL MEDIA ===== */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(91, 91, 92, 0.007);
+      color: white;
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+    
+    .social-icons a:hover {
+      transform: translateY(-5px);
+      background: blue;
+    }
+    .course-pricing {
+  overflow-x: auto;
+  margin: 40px auto;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.014);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.course-pricing table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.course-pricing thead {
+  background-color: #cc5500; /* Burnt orange */
+  color: white;
+}
+
+.course-pricing thead th {
+  padding: 14px;
+  font-size: 1.1rem;
+}
+
+.course-pricing tr:nth-child(even) {
+  background-color: #f2f2f23b;
+}
+
+.course-pricing td {
+  padding: 12px 14px;
+  color: #333;
+}
+
+.course-pricing tr:hover {
+  background-color: #ffe6cc00; /* soft light orange */
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .course-pricing table, 
+  .course-pricing thead, 
+  .course-pricing tbody, 
+  .course-pricing th, 
+  .course-pricing td, 
+  .course-pricing tr {
+    display: block;
+  }
+
+  .course-pricing thead {
+    display: none;
+  }
+
+  .course-pricing td {
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .course-pricing td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #cc5500;
+    text-align: left;
+  }
+}
+    
+    /* ===== MAP SECTION ===== */
+    .map-container {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-top: 30px;
+    }
+    
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+    }
+    
+    .back-to-top {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50px;
+      transition: var(--transition);
+    }
+    
+    .back-to-top:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 3rem;
+      }
+      
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+      
+      nav ul {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        transition: var(--transition);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+      }
+      
+      nav ul.active {
+        right: 0;
+      }
+      
+      nav ul li {
+        margin: 15px 0;
+      }
+      
+      #home h1 {
+        font-size: 2.8rem;
+      }
+      
+      #home p {
+        font-size: 1.3rem;
+      }
+      
+      .hero-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      section {
+        padding: 60px 0;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      #home {
+        min-height: 600px;
+      }
+    }
+  
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="beauty college in Machakos, hair and beauty school Kenya, cosmetology courses Kenya,
+        makeup and beauty training, professional hairdressing school"
+    />
+    <meta
+      name="description"
+      content=" Welcome to Covelyne Training Institute — a premier institution in Kenya offering hands
+    on training in beauty therapy, hairdressing, cosmetology, nail technology, 
+    and spa treatments. Our mission is to empower students with modern skills 
+    and professional expertise needed to succeed in the dynamic beauty industry. 
+    Whether you're starting your journey or enhancing your career, 
+    Covelyne Training Institute provides quality education, experienced tutors, and a vibrant learning environment."
+    />
+     
+    <title>Covelyne  Institute</title>
+    <link rel="stylesheet" href="styles.css" />
+   <!-- <link rel="stylesheet" href="enroll.html" class="html">
+    <link rel="stylesheet" href="courses.html" class="html">
+    <link rel="stylesheet" href="gallery.html" class="html">
+    <link rel="stylesheet" href="connect.html" class="html">
+    <link rel="stylesheet" href="fees.html" class="html">-->
+  </head>
+  <body>
+    <header id="header">
+  <div class="container header-container">
+    <div class="logo">Covelyne <span> Institute</span></div>
+
+    <!-- MOVE THIS INSIDE 
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>-->
+
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="enroll.html">Enroll Now</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="connect.html">Contact</a></li>
+        <li><a href="connect.html">Social Media</a></li>
+        <li><a href="#map">Location</a></li>
+      </ul>
+    </nav>
+    
+    <!-- <div class="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </div>-->
+  </div>
+</header>
+
+
+    <section id="home">
+      <div class="container">
+        <h1>Welcome to Covelyne Training Institute</h1>
+        <p>Your journey to a glamorous career begins here.</p>
+        <div class="hero-btns">
+          <a href="courses.html" class="btn">Explore Courses</a>
+          <a href="enroll.html" class="btn btn-secondary">Enroll Today</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="animate">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          We are a premier institution offering professional training in beauty
+          therapy, cosmetology, hairdressing, and more. Covelyne Training
+          Institute is a
+          <span class="accent-text">TVETA-approved institution</span>. Our Main
+          Campus is located at Shanbad House, Opposite New Naivas, Machakos
+          Town, Kenya. We offer courses at competence and certificate levels.
+          Part-time and evening classes are available.
+        </p>
+      </div>
+    </section>
+
+
+    <section id="courses" class="animate">
+      <div class="container">
+        <h2>Our Courses</h2>
+        <div class="course-container">
+          <div class="course-card">
+            <img
+              src="IMG-20250617-WA0005 (1).jpg" alt="Cosmetology">
+            
+            <div class="course-content">
+              <h3>Cosmetology</h3>
+              <p>All-in-one course covering hair, skin, and nails.</p>
+            </div>
+          </div>
+          <div class="course-card">
+            <img
+              src="IMG-20250617-WA0006.jpg" alt="Hairdressing"
+            />
+            <div class="course-content">
+              <h3>Hairdressing</h3>
+              <p>Master cutting, styling, and coloring techniques.</p>
+            </div>
+          </div>
+          <div class="course-card">
+            <img
+              src="IMG-20250617-WA0009.jpg" alt="Beauty Therapy"
+            />
+            <div class="course-content">
+              <h3>Beauty Therapy</h3>
+              <p>Get Facials, massage, skincare and waxing techniques.</p>
+            </div>
+          </div>
+          <div class="course-card">
+            <img
+              src="IMG-20250617-WA0002.jpg" alt="Nail Technology"
+            />
+            <div class="course-content">
+              <h3>Nail Technology</h3>
+              <p>Manicure, pedicure, gel, and acrylic nail training.</p>
+            </div>
+          </div>
+          <div class="course-card">
+            <img
+               src="IMG-20250617-WA0003.jpg" alt="Barbering"
+            />
+            <div class="course-content">
+              <h3>Barbering</h3>
+              <p>
+                Fading, tapering, texturizing, and line-ups for Men and Women.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="animate">
+      <div class="container">
+       
+  <h2>Gallery</h2>
+  <p>Take a look at our modern classrooms, practical sessions, and student projects.</p>
+  <div class="gallery-grid">
+    <figure>
+      <img src="IMG-20250617-WA0002.jpg" alt="Hairdressing Class">
+      <figcaption>Students practicing hairdressing techniques in a hands-on session.</figcaption>
+    </figure>
+    <figure>
+      <img src="IMG-20250617-WA0003.jpg" alt="Beauty Therapy Session">
+      <figcaption>Beauty therapy session focusing on skincare and facial massage.</figcaption>
+    </figure>
+  
+    <figure>
+      <img src="IMG-20250617-WA0005 (1).jpg" alt="Nail Training">
+      <figcaption>Nail technology training with gel and acrylic application.</figcaption>
+    </figure>
+    <figure>
+      <img src="IMG-20250617-WA0007.jpg" alt="Cosmetology Overview">
+      <figcaption>Comprehensive cosmetology class covering multiple beauty skills.</figcaption>
+    </figure>
+    <figure>
+      <img src="IMG-20250617-WA0009.jpg" alt="Barbering Class">
+      <figcaption>Barbering students practicing fading, lining, and cutting techniques.</figcaption>
+    </figure>
+  </div>
+</section>
+
+    <section id="requirements">
+        <div class="container">
+  <h2 >Requirements</h2>
+  
+ <ul>
+      <li>Registration fee 1,000/=</li>
+      <li>Fees to be paid</li>
+      <li>2 T-shirts provided by the college at <a href="fees.html">Read More</a></li> 
+ </ul>
+</section>
+
+    <section id="enrollnow" class="animate">
+      <div class="container">
+        <h2>Enroll Now</h2>
+        <p>
+          Admissions Ongoing. Apply Here or visit our Main Campus at Shanbad
+          House, Opposite New Naivas, Machakos Town, Kenya
+        </p>
+        <form
+          action="https://formsubmit.co/covelynetrainingnstitute@gmail.com"
+          method="POST"
+        >
+          <div class="form-grid">
+            <div>
+              <input type="text" name="Your_Name" placeholder="Your Name" required />
+            </div>
+            <div>
+              <input type="email" name="Your_Email" placeholder="Your Email" required />
+            </div>
+            <div>
+              <input
+                type="tel"
+                name="phonenumber"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div>
+              <select name="selectcourse" id="selectcourse">
+              <option value="Select Course">Select Course</option>
+             <option value="Hairdressing">Diploma in Hair Dressing</option>
+             <option value="Hairdressing">Certificate in Hair Dressing</option>
+             <option value="beautytherapy">Diploma in Beauty Therapy</option>
+             <option value="beautytherapy">Certificate in Beauty Therapy</option>
+             <option value="Barbering">Barbering</option>
+             <option value="Nail Technology">Nail Technology</option>
+             <option value="t.o.t">T.O.T</option>
+            
+          </select>
+            </div>
+          </div>
+          <div>
+            <textarea
+            name="textarea"
+              placeholder="Tell us about your interests and goals..."
+              required
+            ></textarea>
+          </div>
+          <button name="submit" type="submit" class="btn btn-secondary">
+            Send Application
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="animate">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>
+              Email:
+              <a
+                href="mailto:covelynetrainingInstitute@gmail.com"
+                target="_blank"
+                >covelynetrainingnstitute@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <p>Phone: +254 714 935 007 / +254 731 456 800</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>
+              Address: Shanbad House, Opposite New Naivas, Machakos Town, Kenya
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="social-media" class="animate">
+      <div class="container">
+        <h2>Connect With Us</h2>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1Agmx4vWou/" target="_blank">
+           <img src="facebook 2 logo.png" alt="facebook">
+          </a>
+          <a href="https://www.tiktok.com/@devaswits" target="_blank">
+            <img src="tiktok 2 logo.png" alt="tiktok">
+          </a>
+          <a href="https://wa.me/254714935007" target="_blank">
+           <img src="whatsapp logo green.png" alt="whatsapp">
+          </a>
+          </a>
+           <a href="https://www.instagram.com/covelyne22?igsh=NTBrZTZ1amMxeWcx" target="_blank">
+          <img src="instagram black logo.png" alt="instagram">
+          </a>
+          <a href="mailto:CovelyneInstitute@gmail.com" target="_blank">
+            <img src="gmail logo 2.png" alt="Gmail">
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="animate">
+      <div class="container">
+        <h2>Find Us on the Map</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.380113517346!2d37.26097755!3d-1.5196516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1fe73094927f%3A0x72d8a5a1b3efc502!2sShanbad%20House%2C%20Machakos!5e0!3m2!1sen!2ske!4v1718710000000"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <div class="container text-center">
+      <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i> Back to Top
+      </a>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Covelyne Training Institute. All rights reserved.</p>
+        <p>
+          TVETA Approved Institution | Transforming Lives Through Beauty
+          Education
+        </p>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
+
