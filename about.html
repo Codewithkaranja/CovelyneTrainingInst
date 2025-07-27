@@ -4,47 +4,134 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covelyne Training Institute - Requirements</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-      /* Modern Color Scheme */
       :root {
-        --primary: #8e44ad; /* Elegant purple */
-        --secondary: #e67e22; /* Warm accent */
+        --primary: #af07f7;
+        --secondary: #e67e22;
         --dark: #2c3e50;
         --light: #f9f9f9;
-        --text: #333;
-        --white: #ffffff;
+        --text: white;
+        --white: #ffffffcc;
         --highlight: #f1c40f;
       }
 
-      /* Base Styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: Arial, sans-serif;
         line-height: 1.6;
-        color: var(--text);
-        background-color: var(--light);
+        color: black;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.103),
+            rgba(255, 255, 255, 0.055)
+          ),
+          url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+            center/cover no-repeat fixed;
       }
 
-      a {
-        display: inline-block;
-        margin: 20px;
-        padding: 10px 20px;
+      header {
         background-color: var(--primary);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        color: var(--text);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        padding: 1rem 20px;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--white);
+      }
+
+      .logo span {
+        color: var(--highlight);
+      }
+      nav ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .nav-menu a {
         color: var(--white);
         text-decoration: none;
-        border-radius: 4px;
         font-weight: 500;
-        transition: all 0.3s ease;
+        list-style-type: none;
+        list-style: none;
       }
 
-      a:hover {
-        background-color: var(--secondary);
-        transform: translateY(-2px);
+      .nav-menu a:hover {
+        color: var(--highlight);
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--white);
+        margin: 4px 0;
+        transition: 0.4s;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+
+        nav {
+          position: absolute;
+          top: 80px;
+          left: -100%;
+          width: 100%;
+          background: var(--primary);
+          transition: left 0.3s ease;
+          list-style: none;
+        }
+
+        nav.active {
+          left: 0;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          gap: 1rem;
+          padding: 2rem 0;
+          list-style: none;
+        }
       }
 
       .container {
@@ -57,13 +144,11 @@
         padding: 40px 0;
       }
 
-      /* Typography */
       h1,
       h2,
       h3 {
-        color: var(--primary);
+        color: purple;
         margin-bottom: 20px;
-        position: relative;
       }
 
       h2::after {
@@ -76,52 +161,42 @@
       }
 
       .accent-text {
-        color: var(--secondary);
+        color: purple;
         font-weight: 600;
       }
 
-      /* About Section */
       #about {
         background-color: var(--white);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
       }
 
-      #about p {
-        font-size: 1.1rem;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      /* Requirements Section */
       #requirements {
-        background-color: #f5f5f5;
+        background-color: #f5f5f548;
       }
 
       ul {
-        margin-left: 30px;
-        margin-bottom: 20px;
+        list-style: none;
+        padding-left: 20px;
       }
 
       li {
-        margin-bottom: 8px;
         position: relative;
+        margin-bottom: 8px;
         padding-left: 20px;
       }
 
       li::before {
         content: "•";
-        color: var(--secondary);
-        font-size: 1.5rem;
+        color: purple;
         position: absolute;
         left: 0;
+        font-size: 1.5rem;
         top: -3px;
       }
 
-      /* Pricing Table */
       .course-pricing {
         overflow-x: auto;
         margin: 30px 0;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
       }
 
@@ -141,61 +216,22 @@
       th {
         background-color: var(--primary);
         color: var(--white);
-        font-weight: 500;
-      }
-
-      tr:nth-child(even) {
-        background-color: #f9f9f9;
       }
 
       tr:hover {
-        background-color: #f1f1f1;
+        background-color: white;
       }
 
-      td[data-label]::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: none;
-      }
-
-      /* Footer */
       footer {
-        background-color: var(--dark);
-        color: var(--white);
+        background-color: purple;
+        color: white;
         text-align: center;
         padding: 30px 0;
       }
 
-      footer p {
-        margin-bottom: 10px;
-      }
-
-      /* Animations */
-      .animate {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease;
-      }
-
-      .animate.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Responsive Design */
       @media (max-width: 768px) {
         .container {
           padding: 15px;
-        }
-
-        section {
-          padding: 30px 0;
-        }
-
-        td[data-label]::before {
-          display: inline-block;
-          width: 100px;
-          margin-right: 10px;
         }
 
         table,
@@ -210,7 +246,6 @@
         thead tr {
           position: absolute;
           top: -9999px;
-          left: -9999px;
         }
 
         tr {
@@ -219,7 +254,6 @@
         }
 
         td {
-          border: none;
           position: relative;
           padding-left: 50%;
         }
@@ -228,17 +262,53 @@
           position: absolute;
           left: 15px;
           width: 45%;
-          padding-right: 10px;
-          white-space: nowrap;
+          font-weight: bold;
         }
       }
     </style>
   </head>
   <body>
-    <a href="index.html">← Back to Home</a>
-    <a href="enroll.html"> Apply Now</a>
+    <header id="header">
+      <div class="container header-container">
+        <div class="logo">Covelyne <span>Institute</span></div>
+        <nav id="nav-menu">
+          <ul class="nav-menu">
+            <li>
+              <i class="fa-solid fa-house-chimney"></i
+              ><a href="index.html">Home</a>
+            </li>
+            <!-- <li><i class="fa-solid fa-circle-question"></i>  <a href="about.html">About Us</a></li>-->
+            <li>
+              <i class="fa-solid fa-book-open-reader"></i
+              ><a href="courses.html">Courses</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-right-to-bracket"></i
+              ><a href="enroll.html">Enroll Now</a>
+            </li>
+            <!-- <li>
+              <i class="fa-solid fa-camera"></i
+              ><a href="gallery.html">Gallery</a>
+            </li>-->
+            <li>
+              <i class="fa-solid fa-circle-question"></i>
+              <a href="about.html">About Us</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i
+              ><a href="connect.html">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="hamburger" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
 
-    <section id="about" class="animate">
+    <section id="about">
       <div class="container">
         <h2>About Us</h2>
         <p>
@@ -265,7 +335,6 @@
           <li>College WID card 500/=</li>
           <li>National ID or Birth Certificate</li>
         </ul>
-        <br />
 
         <h2>N/b</h2>
         <ul>
@@ -275,9 +344,10 @@
           <li>Certificate courses 6 months</li>
           <li>T.O.T 12 months</li>
         </ul>
-        <br />
+
         <h2>Fee Structure</h2>
         <p>The Cosmetology fees structure below includes (Tuition Fee only)</p>
+
         <div class="course-pricing">
           <table>
             <thead>
@@ -334,18 +404,18 @@
             </tbody>
           </table>
         </div>
-        <br />
-        <h2>Examination & Certification</h2>
 
+        <h2>Examination & Certification</h2>
         <ul>
           <li>
-            Exam Fee(NITA) 11,000/= Payale in (April, August and December)
+            Exam Fee (NITA) 11,000/= Payable in (April, August and December)
           </li>
           <li>Internal Certificate 1,000/=</li>
-          <li>Diploma 2000/=</li>
+          <li>Diploma 2,000/=</li>
         </ul>
       </div>
     </section>
+
     <footer>
       <div class="container">
         <p>&copy; 2025 Covelyne Training Institute. All rights reserved.</p>
@@ -357,23 +427,13 @@
     </footer>
 
     <script>
-      // Simple animation trigger
-      document.addEventListener("DOMContentLoaded", function () {
-        const animateElements = document.querySelectorAll(".animate");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
-
-        animateElements.forEach((el) => observer.observe(el));
-      });
+      // Hamburger toggle
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          this.classList.toggle("active");
+          document.getElementById("nav-menu").classList.toggle("active");
+        });
     </script>
   </body>
 </html>
