@@ -198,10 +198,10 @@
      /* Page Hero */
 .page-hero {
   background: linear-gradient(
-      rgba(106, 27, 154, 0.8),
-      rgba(74, 20, 140, 0.9)
+      rgba(105, 27, 154, 0.281),
+      rgba(74, 20, 140, 0.747)
     ),
-    url("https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
+    url("https://images.unsplash.com/photo-1757866332661-d82bb649dbb8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHxibGFjayUyMGxhZGllcyUyMGluJTIwYSUyMHNhbG9ufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500")
       no-repeat center center/cover;
   height: 80vh;
   display: flex;
@@ -311,52 +311,108 @@
         color: var(--burnt-orange);
         font-weight: bold;
       }
+/* Fees Section */
+.fees-section {
+  margin-bottom: 60px;
+}
 
-      /* Fees Section */
-      .fees-section {
-        margin-bottom: 60px;
-      }
+/* Accordion Container */
+.fees-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-      .fees-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 30px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        border-radius: 10px;
-        overflow: hidden;
-      }
+/* Accordion Item */
+.accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
 
-      .fees-table th {
-        background: linear-gradient(
-          135deg,
-          var(--primary-purple),
-          var(--light-purple)
-        );
-        color:var(--gold);
-        padding: 15px;
-        text-align: left;
-      }
+/* Accordion Header */
+.accordion-header {
+  background: linear-gradient(135deg, var(--primary-purple), var(--light-purple));
+  color: rgba(255, 255, 255, 0.829);
+  font-weight: 500;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
 
-      .fees-table td {
-        padding: 15px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        color: white;
-      }
+.accordion-header:hover {
+  background: linear-gradient(135deg, var(--light-purple), var(--primary-purple));
+}
 
-      .fees-table tr:nth-child(even) {
-        background-color: rgba(106, 27, 154, 0.05);
-      }
+/* Accordion Icon */
+.accordion-icon {
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
 
-      .fees-table td:first-child {
-        font-weight: 500;
-      }
+/* Accordion Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
 
-      .note {
-        background: var(--light-gray);
-        padding: 20px;
-        border-radius: 10px;
-        border-left: 4px solid var(--burnt-orange);
-      }
+/* Active Accordion */
+.accordion-item.active .accordion-content {
+  max-height: 500px; /* enough for table */
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg); /* plus turns into X */
+}
+
+/* Fees Table inside Accordion */
+.accordion-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+  overflow: hidden;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1);
+}
+
+.accordion-content table th,
+.accordion-content table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  color: white;
+}
+
+.accordion-content table th {
+  background: rgba(106,27,154,0.3);
+  color: var(--gold);
+}
+
+.accordion-content table tr:nth-child(even) {
+  background-color: rgba(106, 27, 154, 0.05);
+}
+
+.accordion-content table td:first-child {
+  font-weight: 500;
+}
+
+/* Note section */
+.note {
+  background: var(--light-gray);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid var(--burnt-orange);
+  margin-top: 20px;
+}
+
 
       /* Enrollment Form Section */
       .enroll-form-section {

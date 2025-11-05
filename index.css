@@ -390,6 +390,7 @@
         margin: 0 auto;
         animation: typing 3.5s steps(40, end),
           blink-caret 0.75s step-end infinite;
+          color: white;
       }
 
       .hero p {
@@ -528,91 +529,119 @@
       }
 
       /* Testimonials Section */
-      .testimonials {
-        padding: 100px 0;
-        background: linear-gradient(
-          135deg,
-          var(--light-purple),
-          var(--primary-purple)
-        );
-        color: var(--white);
-      }
+   .testimonials {
+  padding: 100px 0;
+  background: rgba(255, 255, 255, 0.397);
+  color: var(--white);
+  overflow: hidden;
+}
 
-      .testimonials h2 {
-        color: var(--gold);
-      }
+.testimonials h2 {
+  color: var(--gold);
+}
 
-      .testimonials h2:after {
-        background: linear-gradient(to right, var(--gold), var(--light-gold));
-      }
+.testimonials p {
+  color: black;
+}
 
-      .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-      }
+.testimonials-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
 
-      .testimonial-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 10px;
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
+.testimonials-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
 
-      .testimonial-text {
-        font-style: italic;
-        margin-bottom: 20px;
-        position: relative;
-      }
+.testimonial-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  background: black;
+  border-radius: 10px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: var(--white);
+}
 
-      .testimonial-text:before {
-        content: '"';
-        font-size: 4rem;
-        color: rgba(255, 255, 255, 0.2);
-        position: absolute;
-        top: -20px;
-        left: -10px;
-      }
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 20px;
+  position: relative;
+}
 
-      .testimonial-author {
-        display: flex;
-        align-items: center;
-      }
+.testimonial-text:before {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
 
-      .author-img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 15px;
-      }
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
 
-      .author-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
 
-      .author-info h4 {
-        color: var(--white);
-        margin-bottom: 5px;
-      }
+.author-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-      .author-info p {
-        margin-bottom: 0;
-        font-size: 0.9rem;
-        opacity: 0.8;
-      }
+.author-info h4 {
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.author-info p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ===== Slider Dots ===== */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.slider-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-dots button.active {
+  background: var(--gold);
+}
 
       /* CTA Section */
       .cta {
         padding: 100px 0;
         background: linear-gradient(
-            rgba(106, 27, 154, 0.9),
-            rgba(74, 20, 140, 0.9)
+            rgba(105, 27, 154, 0),
+            rgba(74, 20, 140, 0.295)
           ),
-          url("https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
+          url("https://images.unsplash.com/photo-1592822227725-81b0d6f386d7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzk0fHxibGFjayUyMGxhZGllcyUyMGluJTIwYSUyMHNhbG9uJTIwM0R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500")
             no-repeat center center/cover;
         color: var(--white);
         text-align: center;
@@ -644,7 +673,7 @@
       }
 
       .footer-col h3 {
-        color: var(--white);
+        color: var(--gold);
         margin-bottom: 25px;
         font-size: 1.3rem;
         position: relative;

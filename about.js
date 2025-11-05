@@ -146,3 +146,49 @@ document.querySelector(".newsletter-form button").addEventListener("click", func
     }, 2000);
   }
 });
+// ===== Infinite Auto Gallery Slider =====
+// ===== Infinite Auto Gallery Slider with Dots =====
+const galleryGrid = document.querySelector(".gallery-grid");
+const galleryItems = document.querySelectorAll(".gallery-item");
+const totalItems = galleryItems.length;
+const dotsContainer = document.querySelector(".gallery-dots");
+let galleryIndex = 0;
+
+// Clone items for seamless loop
+galleryItems.forEach(item => {
+  const clone = item.cloneNode(true);
+  galleryGrid.appendChild(clone);
+});
+
+// Create dots
+for (let i = 0; i < totalItems; i++) {
+  const dot = document.createElement("button");
+  if (i === 0) dot.classList.add("active");
+  dotsContainer.appendChild(dot);
+
+  dot.addEventListener("click", () => {
+    galleryIndex = i;
+    updateGallery();
+  });
+}
+
+const dots = document.querySelectorAll(".gallery-dots button");
+
+// Function to update slider and dots
+function updateGallery() {
+  const itemWidth = galleryItems[0].offsetWidth + 25; // 25px = gap
+  galleryGrid.style.transition = "transform 1s ease-in-out";
+  galleryGrid.style.transform = `translateX(${-galleryIndex * itemWidth}px)`;
+  
+  dots.forEach((dot, i) => dot.classList.toggle("active", i === galleryIndex));
+}
+
+// Auto slide every 3 seconds
+setInterval(() => {
+  galleryIndex++;
+  if (galleryIndex >= totalItems) {
+    galleryIndex = 0;
+  }
+  updateGallery();
+}, 3000);
+

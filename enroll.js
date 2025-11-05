@@ -256,3 +256,37 @@
       // Start typewriter effect
       setTimeout(typeWriter, 1000);
 
+      // Accordion Functionality
+const accordions = document.querySelectorAll(".accordion-item");
+
+accordions.forEach(item => {
+  const header = item.querySelector(".accordion-header");
+
+  header.addEventListener("click", () => {
+    // Close other accordions
+    accordions.forEach(i => {
+      if (i !== item) {
+        i.classList.remove("active");
+        i.querySelector(".accordion-content").style.maxHeight = null;
+        i.querySelector(".accordion-icon").textContent = "+";
+      }
+    });
+
+    // Toggle current
+    item.classList.toggle("active");
+    const content = item.querySelector(".accordion-content");
+    if (item.classList.contains("active")) {
+      content.style.maxHeight = content.scrollHeight + "px";
+      item.querySelector(".accordion-icon").textContent = "-";
+    } else {
+      content.style.maxHeight = null;
+      item.querySelector(".accordion-icon").textContent = "+";
+    }
+  });
+});
+
+// Set max-height for initially active items
+document.querySelectorAll(".accordion-item.active .accordion-content").forEach(content => {
+  content.style.maxHeight = content.scrollHeight + "px";
+});
+

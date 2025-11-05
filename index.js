@@ -48,7 +48,7 @@ document.querySelectorAll(".nav-menu a").forEach((link) => {
 
          // Typewriter Effect
       const typewriterElement = document.getElementById("typewriter");
-      const words = ["Luxury", "Comfort", "Nature", "Tranquility"];
+      const words = [ "Train", "Transform", "Thrive"];
       let wordIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const images = [
     "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1074&q=80",
     "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGJlYXV0eSUyMHNhbG9uJTIwcGljdHVyZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
-    "https://images.unsplash.com/photo-1500839941678-aae14dbfae9a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fGJlYXV0eSUyMHNhbG9uJTIwcGljdHVyZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
+    "https://images.unsplash.com/photo-1580494412804-90550d4638a1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjExfHxibGFjayUyMGxhZGllcyUyMGluJTIwYSUyMHNhbG9uJTIwM0R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
     "https://images.unsplash.com/photo-1660505155761-fb440082f784?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fGJlYXV0eSUyMHNhbG9uJTIwcGljdHVyZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500"
   ];
 
@@ -113,5 +113,40 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[current].classList.remove("active");
     current = (current + 1) % slides.length;
     slides[current].classList.add("active");
-  }, 5000); // 5 seconds per image
+  }, 4000); // 5 seconds per image
+});
+// ===== Testimonials Auto Slider =====
+const track = document.querySelector(".testimonials-track");
+const slides = document.querySelectorAll(".testimonial-card");
+const dotsContainer = document.querySelector(".slider-dots");
+
+let currentIndex = 0;
+
+// Create dots dynamically
+slides.forEach((_, i) => {
+  const dot = document.createElement("button");
+  if (i === 0) dot.classList.add("active");
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".slider-dots button");
+
+// Function to update slider
+function updateSlider(index) {
+  track.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+}
+
+// Auto slide every 2 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlider(currentIndex);
+}, 2000);
+
+// Dot click navigation
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    currentIndex = i;
+    updateSlider(currentIndex);
+  });
 });
